@@ -1,0 +1,6 @@
+flask
+eventlet
+flask_socketio
+openai
+bs4
+requests

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Vortex Web</title>
+        <meta name="title" content="Vortex Web">
+        <meta name="description" content="Vortex Web - Run private open-weight LLMs in the cloud for free. No accounts required.">
+        <meta name="keywords" content="ai, chatgpt, 4o, private, cloud">
+        <meta name="robots" content="index, follow">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="language" content="English">
+        <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
+        <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <h2 id="intro">What's on your mind today?</h2>
+        <div id="chat"></div>
+        <input id="chatbox"></input>
+        <button id="chatbtn">↑</button>
+        <footer>Vortex is an AI. AI may make mistakes. Double check information given by Vortex.</footer>
+        <select id="model">
+            <option value="fast">⚡ Flash</option>
+            <option value="smart">🧠 Smart</option>
+        </select>
+        <script src="script.js"></script>
+    </body>
+</html>

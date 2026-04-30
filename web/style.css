@@ -1,0 +1,107 @@
+body{
+    background-color: #191919;
+    margin: 0px;
+}
+#logo{
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#logo:hover{
+    background-color: #252525;
+}
+#chats{
+    margin: 0px;
+}
+*{
+    color: white;
+    font-family: -apple-system-body,"ui-sans-serif",-apple-system,"system-ui",Segoe UI,Helvetica,Apple Color Emoji,Arial,"sans-serif",Segoe UI Emoji,Segoe UI Symbol;
+}
+#chatbox{
+    position: fixed;
+    width: 750px;
+    height: 16px;
+    left: 50vw;
+    transform: translateX(-50%);
+    top: calc(50vh + 35px);
+    resize: none;
+    border: 1px solid #2b2b2b;
+    border-radius: 50px;
+    outline: none;
+    padding: 15px;
+    background: #252525;
+    font-size: 16px;
+}
+#chatbtn{
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    left: calc(50vw + 350px);
+    top: calc(50vh + 43px);
+    border: none;
+    border-radius: 32px;
+    color: black;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#chatbtn:disabled{
+    cursor: default;
+}
+#chat{
+    position: fixed;
+    top: 30px;
+    left: 50vw;
+    width: 800px;
+    height: calc(100vh - 120px);
+    transform: translateX(-50%);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+#chat::-webkit-scrollbar{
+    display: none;
+}
+.user, .assistant{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 12px;
+    width: fit-content;
+}
+.user{
+    margin-left: auto;
+    background-color: #222222;
+}
+#intro{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0px;
+}
+footer{
+    color: #333333;
+    font-style: italic;
+    font-size: 12px;
+    position: fixed;
+    bottom: 10px;
+    width: 100vw;
+    text-align: center;
+}
+#model{
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    padding: 7px;
+    border: 1px solid #252525;
+    background: none;
+    outline: none;
+    border-radius: 8px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+#model:hover{
+    background: #252525;
+}
