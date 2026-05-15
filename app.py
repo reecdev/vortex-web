@@ -96,9 +96,6 @@ def user(data):
     messages = chats[id]
     messages.append({"role": "user", "content": prompt})
 
-    buffer_t = ""
-    buffer_t_counter = 0
-
     finished = False
     while finished == False:
         hasContent = False
@@ -114,12 +111,7 @@ def user(data):
                     emit("assistant_newl", "")
                 hasContent = True
                 ou += delta.content
-                buffer_t_counter += 1
-                buffer_t += delta.content
-                if buffer_t_counter > 4:
-                    buffer_t_counter = 0
-                    emit("assistant", buffer_t)
-                    buffer_t = ""
+                emit("assistant", delta.content)
 
             if delta.tool_calls:
                 for tcchunk in delta.tool_calls:
