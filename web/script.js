@@ -67,12 +67,14 @@ socket.on("assistant_newl", (data) => {
 socket.on("indicate", (data) => {
     $("#chat").lastElementChild.innerHTML = data.toString();
     $("#chat").scrollTop = $("#chat").scrollHeight;
+    $("#chat").lastElementChild.style.color = "gray";
 });
 
 socket.on("assistant", (data) => {
     aresponse = aresponse + data.toString();
     if(aresponse.trim() != ""){
         $("#chat").lastElementChild.innerHTML = md.render(aresponse);
+        $("#chat").lastElementChild.style.color = "white";
         $("#chat").scrollTop = $("#chat").scrollHeight;
     }
 });
