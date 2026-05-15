@@ -89,7 +89,7 @@ def home():
 def user(data):
     prompt = data["content"]
     id = data["id"]
-    model = "openai/gpt-oss-120b:free" if data["model"] == "smart" else "openai/gpt-oss-20b:free"
+    model = "openai/gpt-oss-120b:free" if data["model"] == "smart" else "nvidia/nemotron-3-nano-30b-a3b:free"
 
     if not id in chats:
         chats[id] = [{"role": "system", "content": "You are a helpful AI assistant named Vortex.\nVortex should search the web for information if it does not have information about the subject"}]
