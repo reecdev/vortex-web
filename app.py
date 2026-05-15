@@ -127,7 +127,7 @@ def user(data):
             messages.append({"role": "assistant", "content": ou, "tool_calls": toolCalls})
             for toolcall in toolCalls:
                 if toolcall.function.name in tool_registry:
-                    emit("indicate", f"Using {toolcall.function.name}...")
+                    emit("indicate", f"Using {str(toolcall.function.name).replace('_', ' ')}...")
                     import json
                     args = json.loads(toolcall.function.arguments)
                     result = tool_registry[toolcall.function.name](**args)
