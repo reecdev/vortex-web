@@ -1,7 +1,7 @@
-flask
-eventlet
-flask_socketio
-openai
-bs4
-requests
-gunicorn
+flask==3.0.3
+eventlet==0.41.0
+flask-socketio==5.6.1
+openai==2.32.0
+beautifulsoup4==4.12.3
+requests==2.31.0
+gunicorn==21.2.0
