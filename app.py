@@ -133,10 +133,6 @@ def user(data):
         else:
             messages.append({"role": "assistant", "content": ou})
 
-        emit("assistant", buffer_t)
-        buffer_t = ""
-        buffer_t_counter = 0
-
         if ou != "":
             finished = ou
     
