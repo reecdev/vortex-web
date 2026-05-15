@@ -56,8 +56,17 @@ $("#chatbtn").addEventListener("click", function(){
     chat()
 });
 
+$("#model").addEventListener("change", function(){
+    model_pref = $("#model").value;
+})
+
 socket.on("assistant_newl", (data) => {
     addChatMsg("assistant", "");
+});
+
+socket.on("indicate", (data) => {
+    $("#chat").lastElementChild.innerHTML = data.toString();
+    $("#chat").scrollTop = $("#chat").scrollHeight;
 });
 
 socket.on("assistant", (data) => {
