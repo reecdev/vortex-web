@@ -96,6 +96,8 @@ def user(data):
     messages = chats[id]
     messages.append({"role": "user", "content": prompt})
 
+    emit("assistant_newl", "")
+    
     finished = False
     while finished == False:
         hasContent = False
@@ -108,7 +110,7 @@ def user(data):
 
             if delta.content:
                 if not hasContent:
-                    emit("assistant_newl", "")
+                    emit("indicate", "")
                 hasContent = True
                 ou += delta.content
                 emit("assistant", delta.content)
@@ -125,6 +127,7 @@ def user(data):
             messages.append({"role": "assistant", "content": ou, "tool_calls": toolCalls})
             for toolcall in toolCalls:
                 if toolcall.function.name in tool_registry:
+                    emit("indicate", f"Using {toolcall.function.name}...")
                     import json
                     args = json.loads(toolcall.function.arguments)
                     result = tool_registry[toolcall.function.name](**args)
